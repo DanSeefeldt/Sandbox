@@ -1163,18 +1163,18 @@
           "runtimes/ubuntu.14.04-x64/lib/dotnet/mscorlib.dll": {}
         },
         "native": {
-          "runtimes/ubuntu.14.04-x64/native/libprotojit.so": {},
-          "runtimes/ubuntu.14.04-x64/native/System.Security.Cryptography.Native.so": {},
-          "runtimes/ubuntu.14.04-x64/native/libmscordaccore.so": {},
-          "runtimes/ubuntu.14.04-x64/native/libcoreclr.so": {},
           "runtimes/ubuntu.14.04-x64/native/System.Globalization.Native.so": {},
-          "runtimes/ubuntu.14.04-x64/native/libsos.so": {},
-          "runtimes/ubuntu.14.04-x64/native/libcoreclrtraceptprovider.so": {},
-          "runtimes/ubuntu.14.04-x64/native/libsosplugin.so": {},
           "runtimes/ubuntu.14.04-x64/native/System.Native.so": {},
-          "runtimes/ubuntu.14.04-x64/native/libmscordbi.so": {},
+          "runtimes/ubuntu.14.04-x64/native/System.Net.Http.Native.so": {},
+          "runtimes/ubuntu.14.04-x64/native/System.Security.Cryptography.Native.so": {},
+          "runtimes/ubuntu.14.04-x64/native/libcoreclr.so": {},
+          "runtimes/ubuntu.14.04-x64/native/libcoreclrtraceptprovider.so": {},
           "runtimes/ubuntu.14.04-x64/native/libdbgshim.so": {},
-          "runtimes/ubuntu.14.04-x64/native/System.Net.Http.Native.so": {}
+          "runtimes/ubuntu.14.04-x64/native/libmscordaccore.so": {},
+          "runtimes/ubuntu.14.04-x64/native/libmscordbi.so": {},
+          "runtimes/ubuntu.14.04-x64/native/libprotojit.so": {},
+          "runtimes/ubuntu.14.04-x64/native/libsos.so": {},
+          "runtimes/ubuntu.14.04-x64/native/libsosplugin.so": {}
         }
       },
       "runtime.unix.System.Console/4.0.0-beta-23516": {
