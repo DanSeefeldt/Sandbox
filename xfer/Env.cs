@@ -56,5 +56,6 @@ namespace Microsoft.DotNet.Cli.Utils
                     return defaultValue;
             }
         }
+
     }
 }

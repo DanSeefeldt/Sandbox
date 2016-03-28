@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.ApplicationInsights;
 using Microsoft.Extensions.PlatformAbstractions;
@@ -9,7 +9,7 @@ namespace Microsoft.DotNet.Cli.Utils
     {
         private class Variables
         {
-            public static readonly string InstrumentationKey = "7f5e1cbb-a02f-46ea-9725-33e07eb67606";
+            public static readonly string InstrumentationKey = "74cc1c9e-3e6e-4d05-b3fc-dde9101d0254";
             private static readonly string Prefix = "DOTNET_CLI_TELEMETRY_";
             public static readonly string Optout = Prefix + "OPTOUT";
         }

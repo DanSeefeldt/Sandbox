@@ -16,7 +16,8 @@ Arguments:
 
 Common Options (passed before the command):
   -v|--verbose  Enable verbose output
-  --version     Display .NET CLI Version Info
+  --version     Display .NET CLI Version Number
+  --info        Display .NET CLI Info
 
 Common Commands:
   new           Initialize a basic .NET project
@@ -26,6 +27,7 @@ Common Commands:
   run           Compiles and immediately executes a .NET project
   repl          Launch an interactive session (read, eval, print, loop)
   pack          Creates a NuGet package";
+
         public static int Run(string[] args)
         {
             if (args.Length == 0)

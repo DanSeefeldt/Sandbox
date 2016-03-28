@@ -25,6 +25,6 @@ namespace Microsoft.DotNet.Cli.Utils
         public static bool ShouldPassAnsiCodesThrough()
         {
             return _ansiPassThru.Value;
-        }
+        }        
     }
 }

@@ -61,7 +61,12 @@ namespace Microsoft.DotNet.Cli
                 }
                 else if (IsArg(args[lastArg], "version"))
                 {
-                    PrintVersionInfo();
+                    PrintVersion();
+                    return 0;
+                }
+                else if (IsArg(args[lastArg], "info"))
+                {
+                    PrintInfo();
                     return 0;
                 }
                 else if (IsArg(args[lastArg], "h", "help"))
@@ -116,33 +121,50 @@ namespace Microsoft.DotNet.Cli
                 ["test"] = TestCommand.Run
             };
 
+            int exitCode = 100;
+            
+            string arguments = string.Empty;
+
+
             Func<string[], int> builtIn;
             if (builtIns.TryGetValue(command, out builtIn))
             {
-                return builtIn(appArgs.ToArray());
+                exitCode = builtIn(appArgs.ToArray());
+                
+                appArgs.ToList().ForEach(a => { arguments += a + " "; });
+
             }
-            
-            CommandResult result = Command.Create("dotnet-" + command, appArgs, FrameworkConstants.CommonFrameworks.NetStandardApp15)
-                .ForwardStdErr()
-                .ForwardStdOut()
-                .Execute();
+            else
+            {
+                CommandResult result = Command.Create("dotnet-" + command, appArgs, FrameworkConstants.CommonFrameworks.NetStandardApp15)
+                    .ForwardStdErr()
+                    .ForwardStdOut()
+                    .Execute();
+                arguments = result.StartInfo.Arguments;
+                exitCode = result.ExitCode;
+            }
 
             Telemetry.TrackCommand(
                 command,
                 new Dictionary<string, string>
                 {
-                    ["Arguments"] = result.StartInfo.Arguments,
-                    ["StdErr"] = result.StdErr
+                    ["Arguments"] = arguments
                 },
                 new Dictionary<string, double>
                 {
-                    ["ExitCode"] = result.ExitCode
+                    ["ExitCode"] = exitCode
                 });
 
-            return result.ExitCode;
+            return exitCode;
+
         }
 
-        private static void PrintVersionInfo()
+private static void PrintVersion()
+        {
+            Reporter.Output.WriteLine(Product.Version);
+        }
+
+        private static void PrintInfo()
         {
             HelpCommand.PrintVersionHeader();
 
@@ -157,7 +179,7 @@ namespace Microsoft.DotNet.Cli
             Reporter.Output.WriteLine($" OS Name:     {runtimeEnvironment.OperatingSystem}");
             Reporter.Output.WriteLine($" OS Version:  {runtimeEnvironment.OperatingSystemVersion}");
             Reporter.Output.WriteLine($" OS Platform: {runtimeEnvironment.OperatingSystemPlatform}");
-            Reporter.Output.WriteLine($" Runtime Id:  {runtimeEnvironment.GetRuntimeIdentifier()}");
+            Reporter.Output.WriteLine($" RID:         {runtimeEnvironment.GetRuntimeIdentifier()}");
         }
 
         private static bool IsArg(string candidate, string longName)
