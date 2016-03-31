@@ -5,3 +5,6 @@ copy c:\temp\CLIFiles\Env.cs src\Microsoft.DotNet.Cli.Utils\
 copy c:\temp\CLIFiles\Product.cs src\Microsoft.DotNet.Cli.Utils\
 copy c:\temp\CLIFiles\project.json src\Microsoft.DotNet.Cli.Utils\
 copy c:\temp\CLIFiles\Telemetry.cs src\Microsoft.DotNet.Cli.Utils\
+copy c:\temp\CLIFiles\ITelemetry.cs src\Microsoft.DotNet.Cli.Utils\
+copy c:\temp\CLIFiles\EnvironmentProvider.cs src\Microsoft.DotNet.Cli.Utils\
+copy c:\temp\CLIFiles\IEnvironmentProvider.cs src\Microsoft.DotNet.Cli.Utils\

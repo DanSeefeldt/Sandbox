@@ -5,3 +5,6 @@ cp /opt/Sandbox/xfer/Env.cs src/Microsoft.DotNet.Cli.Utils/
 cp /opt/Sandbox/xfer/Product.cs src/Microsoft.DotNet.Cli.Utils/
 cp /opt/Sandbox/xfer/project.json src/Microsoft.DotNet.Cli.Utils/
 cp /opt/Sandbox/xfer/Telemetry.cs src/Microsoft.DotNet.Cli.Utils/
+cp /opt/Sandbox/xfer/ITelemetry.cs src/Microsoft.DotNet.Cli.Utils/
+cp /opt/Sandbox/xfer/EnvironmentProvider.cs src/Microsoft.DotNet.Cli.Utils/
+cp /opt/Sandbox/xfer/IEnvironmentProvider.cs src/Microsoft.DotNet.Cli.Utils/
