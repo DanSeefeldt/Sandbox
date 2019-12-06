@@ -1,0 +1,11 @@
+System.Private.CoreLib.dll filter=lfs diff=lfs merge=lfs -text
+libmscordaccore.so filter=lfs diff=lfs merge=lfs -text
+libmscordbi.so filter=lfs diff=lfs merge=lfs -text
+System.Globalization.Native.so filter=lfs diff=lfs merge=lfs -text
+libclrjit.so filter=lfs diff=lfs merge=lfs -text
+libcoreclr.so filter=lfs diff=lfs merge=lfs -text
+libcoreclrtraceptprovider.so filter=lfs diff=lfs merge=lfs -text
+libdbgshim.so filter=lfs diff=lfs merge=lfs -text
+createdump filter=lfs diff=lfs merge=lfs -text
+ilasm filter=lfs diff=lfs merge=lfs -text
+ildasm filter=lfs diff=lfs merge=lfs -text
